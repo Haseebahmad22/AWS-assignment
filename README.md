@@ -70,16 +70,16 @@ upload failed: ../../../etc/hosts to s3://cv-23l-3069/site/test.txt An error occ
 Last 10 lines showing scheduled 5-minute runs:
 
 ```log
-2026-10-22T10:00:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:05:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:10:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:15:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:20:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:25:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:30:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:35:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:40:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
-2026-10-22T10:45:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-071a92bf634b8e21a
+2026-10-22T11:05:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:10:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:15:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:20:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:25:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:30:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:35:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:40:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:45:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
+2026-10-22T11:50:01Z - SUCCESS: Synced s3://cv-23l-3069/site/ to /var/www/html. Configured EC2 i-0b04e3da40aafdd55
 ```
 
 ---
