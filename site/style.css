@@ -66,17 +66,64 @@ body {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+}
+
+.candidate-tagline {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    margin-bottom: 12px;
 }
 
 .candidate-meta {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     color: var(--text-secondary);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 24px;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.candidate-summary {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.honor-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.experience-list {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.experience-list li {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.experience-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-weight: bold;
 }
 
 .badge {
