@@ -4,6 +4,5 @@ __pycache__/
 *.py[cod]
 .system_generated/
 scratch/
-deploy-cloudshell.sh
 Lab 7 - Basic App Deployment on AWS.docx
 lab_instructions.txt
