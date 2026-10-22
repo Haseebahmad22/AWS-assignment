@@ -6,6 +6,7 @@
 # ==============================================================================
 
 set -e
+export AWS_PAGER=""
 
 ROLL="23l-3069"
 REGION="${AWS_REGION:-${AWS_DEFAULT_REGION:-us-east-1}}"
@@ -74,7 +75,17 @@ fi
 echo "[5/7] Launching EC2 Instance (Amazon Linux 2023, IMDSv2 required)..."
 AMI_ID=$(aws ssm get-parameter --name "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64" --query "Parameter.Value" --output text)
 
+echo "Attempting to launch with t3.micro (Free Tier eligible)..."
 INSTANCE_ID=$(aws ec2 run-instances \
+    --image-id "${AMI_ID}" \
+    --instance-type t3.micro \
+    --iam-instance-profile Name="${EC2_ROLE}" \
+    --security-group-ids "${SG_ID}" \
+    --user-data file://ec2/user-data.sh \
+    --metadata-options "HttpTokens=required,HttpPutResponseHopLimit=2,HttpEndpoint=enabled" \
+    --tag-specifications "ResourceType=instance,Tags=[{Key=Owner,Value=23l-3069},{Key=Course,Value=cloud},{Key=Name,Value=${EC2_NAME}}]" \
+    --query "Instances[0].InstanceId" --output text 2>/dev/null || \
+aws ec2 run-instances \
     --image-id "${AMI_ID}" \
     --instance-type t2.micro \
     --iam-instance-profile Name="${EC2_ROLE}" \
