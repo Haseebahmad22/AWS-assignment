@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haseeb Ahmad | Curriculum Vitae</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <header class="cv-header">
+            <div class="header-content">
+                <h1 class="candidate-name">Haseeb Ahmad</h1>
+                <p class="candidate-meta">
+                    <span class="badge">Roll No: 23L-3069</span>
+                    <span class="separator">•</span>
+                    <a href="mailto:l233069@lhr.nu.edu.pk" class="contact-link">l233069@lhr.nu.edu.pk</a>
+                </p>
+                <div class="header-actions">
+                    <a href="/cv.pdf" class="btn-download" download="Haseeb_Ahmad_CV.pdf">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF CV
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="cv-main">
+            <!-- Education Section -->
+            <section class="cv-section" id="education">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Bachelor of Science in Computer Science</h3>
+                        <span class="item-date">2023 – Present</span>
+                    </div>
+                    <div class="item-subtitle">FAST National University of Computer and Emerging Sciences (NUCES), Lahore</div>
+                    <p class="item-desc">Relevant Coursework: Cloud Computing, Distributed Systems, Data Structures & Algorithms, Operating Systems, Database Systems, Computer Networks.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Higher Secondary School Certificate (Pre-Engineering)</h3>
+                        <span class="item-date">2021 – 2023</span>
+                    </div>
+                    <div class="item-subtitle">Punjab Group of Colleges, Lahore</div>
+                    <p class="item-desc">Core focus on Mathematics, Physics, and Computer Sciences with high academic standing.</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="cv-section" id="skills">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Cloud & Infrastructure</h4>
+                        <ul class="skill-list">
+                            <li>AWS (EC2, S3, Lambda, IAM, CloudWatch, VPC)</li>
+                            <li>IMDSv2 & Least-Privilege Security</li>
+                            <li>Serverless Architecture & Function URLs</li>
+                            <li>Linux / Amazon Linux 2023 Administration</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Programming & Scripting</h4>
+                        <ul class="skill-list">
+                            <li>Python (Boto3, Flask, FastAPI)</li>
+                            <li>Bash / Shell Scripting & Systemd Automation</li>
+                            <li>JavaScript / Node.js</li>
+                            <li>C / C++ & Object-Oriented Programming</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>DevOps & Tools</h4>
+                        <ul class="skill-list">
+                            <li>Git & GitHub CI/CD Workflows</li>
+                            <li>Apache (httpd) & Nginx Web Servers</li>
+                            <li>System Automation & Cron / Systemd Timers</li>
+                            <li>REST APIs & JSON Web Services</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="cv-section" id="projects">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Dual-Path High Availability CV Hosting on AWS</h3>
+                        <span class="project-tech">AWS EC2 • AWS Lambda • Amazon S3 • IAM • Bash</span>
+                    </div>
+                    <p class="project-desc">
+                        Designed and deployed an automated, secure dual-tier web architecture on AWS. Integrated private S3 object storage with IMDSv2-secured EC2 instances syncing on automated 5-minute systemd timer intervals, alongside a serverless AWS Lambda microservice serving static assets and binary PDF downloads via Public Function URLs.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Automated Cloud Infrastructure Auditor & Evidence Collector</h3>
+                        <span class="project-tech">Bash • AWS CLI • STS • Security Auditing</span>
+                    </div>
+                    <p class="project-desc">
+                        Developed a comprehensive compliance auditing tool that inspects AWS IAM policies for wildcard over-permissioning, validates S3 Block Public Access configurations, checks security group ingress rules, and inspects CloudWatch log retention policies.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Distributed Task Scheduler & Health Monitor</h3>
+                        <span class="project-tech">Python • Systemd • REST API • Linux</span>
+                    </div>
+                    <p class="project-desc">
+                        Implemented a resilient background daemon and systemd timer for distributed task scheduling and health probes with structured JSON logging and fault recovery.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer - Required exact format by Lab 7 Specification -->
+    <footer>Hosted on: {{HOSTED_ON}}</footer>
+</body>
+</html>
