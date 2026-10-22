@@ -99,8 +99,7 @@ echo "EC2 Instance launched: ${INSTANCE_ID}"
 
 # 5. Lambda Function Deployment
 echo "[6/7] Deploying Lambda Function ${LAMBDA_NAME}..."
-rm -f /tmp/lambda_function.zip
-(cd lambda && zip /tmp/lambda_function.zip lambda_function.py)
+python3 -c "import zipfile; z = zipfile.ZipFile('/tmp/lambda_function.zip', 'w'); z.write('lambda/lambda_function.py', 'lambda_function.py'); z.close()"
 
 aws lambda create-function \
     --function-name "${LAMBDA_NAME}" \
@@ -122,12 +121,13 @@ aws lambda create-function-url-config --function-name "${LAMBDA_NAME}" --auth-ty
 
 aws lambda add-permission \
     --function-name "${LAMBDA_NAME}" \
-    --statement-id FunctionURLAllowPublicAccess \
+    --statement-id "PublicURLAccess-$(date +%s)" \
     --action lambda:InvokeFunctionUrl \
     --principal "*" \
     --function-url-auth-type NONE 2>/dev/null || true
 
 # Set log retention to 7 days
+aws logs put-retention-policy --log-group-name "/aws/lambda/${LAMBDA_NAME}" --retention-in-days 7 2>/dev/null || true
 aws logs put-retention-policy --log-group-name "/aws/lambda/${LAMBDA_NAME}" --retention-in-days 7 2>/dev/null || true
 
 # 6. Retrieve Endpoint Information
