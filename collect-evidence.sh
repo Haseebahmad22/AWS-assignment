@@ -7,6 +7,8 @@
 # Author: Haseeb Ahmad (23L-3069)
 # ==============================================================================
 
+export AWS_PAGER=""
+
 # Section 7 & Check C14: Must take exactly 3 arguments. If not, print usage and exit with 1.
 if [ "$#" -ne 3 ]; then
     echo "Usage: $0 <bucket-name> <ec2-address> <lambda-address>"
